@@ -17,13 +17,13 @@ export async function GET(request: Request) {
     const hasTitle = searchParams.has('title');
     const title = hasTitle
       ? searchParams.get('title')?.slice(0, 200)
-      : 'SaasHQ';
+      : 'ICCCAD';
 
     const hasDescription = searchParams.has('description');
 
     const description = hasDescription
       ? searchParams.get('description')?.slice(0, 200)
-      : 'SaasHQ is an open source CRM/ERP starter built on top of NextJS. Technology stack: NextJS with Typescrtipt, Postgresql, TailwindCSS, React, Prisma, shadCN, resend.com, react.email and more. ';
+      : 'ICCCAD is an open source CRM/ERP starter built on top of NextJS. Technology stack: NextJS with Typescrtipt, Postgresql, TailwindCSS, React, Prisma, shadCN, resend.com, react.email and more. ';
 
     return new ImageResponse(
       (
@@ -55,7 +55,7 @@ export async function GET(request: Request) {
               <SiOpenai size={50} color={'white'} />
             </span>
 
-            <p tw="text-neutral-300 pb-10">https://demo.saashq.org</p>
+            <p tw="text-neutral-300 pb-10">https://demo.ICCCAD.org</p>
           </div>
         </div>
       ),

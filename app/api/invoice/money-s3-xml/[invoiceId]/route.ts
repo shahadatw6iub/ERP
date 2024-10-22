@@ -4,63 +4,58 @@ import { prismadb } from '@/lib/prisma';
 import { fillXmlTemplate } from '@/lib/xml-generator';
 import { PutObjectAclCommand } from '@aws-sdk/client-s3';
 import { getServerSession } from 'next-auth';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET({ params }: { params: { invoiceId: string } }) {
+export async function GET(
+  req: NextRequest,
+  { params }: { params: { invoiceId: string } }
+) {
   const session = await getServerSession(authOptions);
   if (!session) {
     return NextResponse.json({ status: 401, body: { error: 'Unauthorized' } });
   }
-
-  //console.log(myCompany, "myCompany");
 
   const { invoiceId } = params;
 
   if (!invoiceId) {
     return NextResponse.json({
       status: 400,
-      body: { error: 'There is no inovice ID, invoice ID is mandatory' },
+      body: { error: 'There is no invoice ID; invoice ID is mandatory' },
     });
   }
 
-  //Get data for invoice headers
+  // Get data for invoice headers
   const myCompany = await prismadb.myAccount.findFirst({});
 
-  //Get data for invoice body
+  // Get data for invoice body
   const invoiceData = await prismadb.invoices.findFirst({
     where: {
       id: invoiceId,
     },
   });
 
-  //This function will generate XML file from template and data
+  // This function will generate XML file from template and data
   const xmlString = fillXmlTemplate(invoiceData, myCompany);
 
-  //write xml to file in public folder /public/tmp/[invoiceId].xml
-  //fs.writeFileSync(`public/tmp/${invoiceId}.xml`, xmlString);
-  //fs.writeFileSync(`public/tmp/${invoiceData}.json`, invoiceData);
-
-  //Store raw XML string in buffer
+  // Store raw XML string in buffer
   const buffer = Buffer.from(xmlString);
 
-  //Upload xml to S3 bucket and return url
+  // Upload XML to S3 bucket and return URL
   const bucketParamsJSON = {
     Bucket: process.env.DO_BUCKET,
     Key: `xml/invoice-${invoiceId}.xml`,
     Body: buffer,
-    ContentType: 'application/json',
+    ContentType: 'application/xml', // Change to 'application/xml' for XML files
     ContentDisposition: 'inline',
-    //   ACL: "public-read",
+    // ACL: "public-read",
   };
 
   await s3Client.send(new PutObjectAclCommand(bucketParamsJSON));
 
-  //S3 bucket url for the invoice
+  // S3 bucket URL for the invoice
   const urlMoneyS3 = `https://${process.env.DO_BUCKET}.${process.env.DO_REGION}.digitaloceanspaces.com/xml/invoice-${invoiceId}.xml`;
 
-  //console.log(urlMoneyS3, "url MoneyS3");
-
-  //Write url to database assigned to invoice
+  // Write URL to database assigned to invoice
   await prismadb.invoices.update({
     where: {
       id: invoiceId,

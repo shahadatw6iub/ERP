@@ -84,7 +84,7 @@ export function SetLanguage({ userId }: Props) {
 
   if (isLoading) {
     return (
-      <LoadingModal isOpen={isLoading} description="Changing SaasHQ language" />
+      <LoadingModal isOpen={isLoading} description="Changing ICCCAD language" />
     );
   }
 
@@ -112,8 +112,8 @@ export function SetLanguage({ userId }: Props) {
                     >
                       {field.value
                         ? languages.find(
-                            (language) => language.value === field.value
-                          )?.label
+                          (language) => language.value === field.value
+                        )?.label
                         : 'Select language'}
                       <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                     </Button>

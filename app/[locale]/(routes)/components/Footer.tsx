@@ -16,13 +16,10 @@ const Footer = async () => {
         </Link>
       </div>
       <div className="hidden space-x-2 pr-2 md:flex">
-        powered by Next.js
-        <span className="mx-1 rounded-md bg-black px-1 text-white">
-          {nextVersion.substring(1, 7) || process.env.NEXT_PUBLIC_NEXT_VERSION}
+        Developed by
+        <Link href={''}><span className="mx-1 rounded-md bg-black px-1 text-white">
+          {"Md Shahadat Hossain Shahal"}
         </span>
-        +
-        <Link href={'https://ui.shadcn.com/'}>
-          <span className="mr-2 rounded-md">shadcnUI</span>
         </Link>{' '}
         hosted by:
         <span className="text-bold underline">
@@ -31,8 +28,8 @@ const Footer = async () => {
       </div>
       <div className="hidden space-x-2 md:flex">
         Supported by:
-        <Link className="pl-1 font-bold" href="https://saashq.org">
-          SaasHQ.
+        <Link className="pl-1 font-bold" href="https://ICCCAD.org">
+          ICCCAD.
         </Link>
       </div>
     </footer>

@@ -1,8 +1,8 @@
 version: "3"
 services:
   my-nextjs-app:
-    image: saashqdev/saashq:0.0.3-beta
-    container_name: saashq-0.0.3-beta
+    image: ICCCADdev/ICCCAD:0.0.3-beta
+    container_name: ICCCAD-0.0.3-beta
     env-file:
       - .env
       - .env.local

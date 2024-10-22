@@ -28,7 +28,7 @@ const AdminModulesPage = async () => {
   return (
     <Container
       title="Modules administration"
-      description={'Here you can manage your SaasHQ modules'}
+      description={'Here you can manage your ICCCAD modules'}
     >
       <DataTable columns={columns} data={modules} search="name" />
     </Container>

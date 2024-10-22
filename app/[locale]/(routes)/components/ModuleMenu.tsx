@@ -42,28 +42,30 @@ const ModuleMenu: FC<Props> = ({ modules, dict, build }) => {
   return (
     <div className="flex flex-col">
       <div
-        className={` ${
-          open ? 'w-72' : 'w-20'
-        } relative h-screen p-5 pt-8 duration-300`}
+        className={`${open ? 'w-72' : 'w-25'} relative h-screen p-5 pt-8 duration-300`}
       >
         <div className="flex items-center gap-x-4">
+          {/* Toggle Button */}
           <div
-            className={`cursor-pointer rounded-full border px-4 py-2 duration-500 ${
-              open && 'rotate-[360deg]'
-            }`}
+            className={`cursor-pointer rounded-full border px-4 py-2 duration-500 ${open && 'rotate-[360deg]'}`}
             onClick={() => setOpen(!open)}
           >
-            HQ
+            {/* Logo always visible */}
+            <img
+              src="icccad.png" // Update the path to your logo image
+              alt="ICCCAD Logo"
+              className={`${open ? 'h-8' : ' h-5'} transition-all duration-300`} // Adjust size based on the open state
+            />
           </div>
 
-          <h1
-            className={`origin-left text-xl font-medium duration-200 ${
-              !open && 'scale-0'
-            }`}
+          {/* App Name visible only when menu is open */}
+          {/* <h1
+            className={`origin-left text-xl font-medium duration-200 ${!open && 'scale-0'}`}
           >
             {process.env.NEXT_PUBLIC_APP_NAME}
-          </h1>
+          </h1> */}
         </div>
+
         <div className="pt-6">
           <DashboardMenu open={open} title={dict.ModuleMenu.dashboard} />
           {modules.find(
@@ -113,10 +115,7 @@ const ModuleMenu: FC<Props> = ({ modules, dict, build }) => {
           {modules.find(
             (menuItem) => menuItem.name === 'documents' && menuItem.enabled
           ) ? (
-            <DocumentsModuleMenu
-              open={open}
-              title={dict.ModuleMenu.documents}
-            />
+            <DocumentsModuleMenu open={open} title={dict.ModuleMenu.documents} />
           ) : null}
           {modules.find(
             (menuItem) => menuItem.name === 'databox' && menuItem.enabled
@@ -137,7 +136,7 @@ const ModuleMenu: FC<Props> = ({ modules, dict, build }) => {
         })}
       >
         <span className="pb-2 text-xs text-gray-500">
-          build: 0.0.3-beta-{build}
+          build: {process.env.NEXT_PUBLIC_APP_V}
         </span>
       </div>
     </div>

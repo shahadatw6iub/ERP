@@ -94,31 +94,31 @@ export function UpdateAccountForm({
     defaultValues: initialData
       ? initialData
       : {
-          id: '',
-          name: '',
-          office_phone: '' as string | null,
-          website: '',
-          fax: '',
-          company_id: '',
-          vat: '',
-          email: '',
-          billing_street: '',
-          billing_postal_code: '',
-          billing_city: '',
-          billing_state: '',
-          billing_country: '',
-          shipping_street: '',
-          shipping_postal_code: '',
-          shipping_city: '',
-          shipping_state: '',
-          shipping_country: '',
-          description: '',
-          assigned_to: '',
-          status: '',
-          annual_revenue: '',
-          member_of: '',
-          industry: '',
-        },
+        id: '',
+        name: '',
+        office_phone: '' as string | null,
+        website: '',
+        fax: '',
+        company_id: '',
+        vat: '',
+        email: '',
+        billing_street: '',
+        billing_postal_code: '',
+        billing_city: '',
+        billing_state: '',
+        billing_country: '',
+        shipping_street: '',
+        shipping_postal_code: '',
+        shipping_city: '',
+        shipping_state: '',
+        shipping_country: '',
+        description: '',
+        assigned_to: '',
+        status: '',
+        annual_revenue: '',
+        member_of: '',
+        industry: '',
+      },
   });
 
   const onSubmit = async (data: NewAccountFormValues) => {
@@ -179,7 +179,7 @@ export function UpdateAccountForm({
                   <FormControl>
                     <Input
                       disabled={isLoading}
-                      placeholder="SaasHQ Inc."
+                      placeholder="ICCCAD Inc."
                       {...field}
                     />
                   </FormControl>

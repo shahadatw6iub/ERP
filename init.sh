@@ -64,8 +64,8 @@ pnpm run build
 # This script is used to start the server
 echo "-------------------------------------- START SCRIPT --------------------------------------"
 echo "Starting the server..."
-echo " Instance: https://$instance.saashq.org"
+echo " Instance: https://$instance.ICCCAD.org"
 echo " Port: $port"
 echo "------------------------------------------------------------------------------------------"
-pm2 start pnpm --name "saashq-$instance" -- start -- --port $port
+pm2 start pnpm --name "ICCCAD-$instance" -- start -- --port $port
 pm2 save

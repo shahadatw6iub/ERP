@@ -52,10 +52,10 @@ export async function POST(req: Request) {
       });
     } else {
       const data = await resend.emails.send({
-        from: 'SaasHQ <saashqdev@saashq.org>',
+        from: 'ICCCAD <ICCCADdev@ICCCAD.org>',
         to: user.email,
-        //to: ["saashqdev@gmail.com"],
-        subject: 'SaasHQ - Password reset',
+        //to: ["ICCCADdev@gmail.com"],
+        subject: 'ICCCAD - Password reset',
         text: '', // Add this line to fix the types issue
         //react: DemoTemplate({ firstName: "John" }),
         react: PasswordResetEmail({

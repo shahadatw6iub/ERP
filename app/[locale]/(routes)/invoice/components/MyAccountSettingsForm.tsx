@@ -114,39 +114,39 @@ export function MyAccountSettingsForm({ initialData }: UpdateAccountFormProps) {
     defaultValues: initialData
       ? initialData
       : {
-          company_name: '',
-          is_person: false,
-          email: '',
-          email_accountant: '',
-          phone_prefix: null,
-          phone: null,
-          mobile_prefix: null,
-          mobile: null,
-          fax_prefix: null,
-          fax: null,
-          website: null,
-          street: '',
-          city: null,
-          state: null,
-          zip: null,
-          country: null,
-          country_code: null,
-          billing_street: null,
-          billing_city: null,
-          billing_state: null,
-          billing_zip: null,
-          billing_country: null,
-          billing_country_code: null,
-          currency: null,
-          currency_symbol: null,
-          VAT_number: '',
-          TAX_number: null,
-          bank_name: null,
-          bank_account: null,
-          bank_code: null,
-          bank_IBAN: null,
-          bank_SWIFT: null,
-        },
+        company_name: '',
+        is_person: false,
+        email: '',
+        email_accountant: '',
+        phone_prefix: null,
+        phone: null,
+        mobile_prefix: null,
+        mobile: null,
+        fax_prefix: null,
+        fax: null,
+        website: null,
+        street: '',
+        city: null,
+        state: null,
+        zip: null,
+        country: null,
+        country_code: null,
+        billing_street: null,
+        billing_city: null,
+        billing_state: null,
+        billing_zip: null,
+        billing_country: null,
+        billing_country_code: null,
+        currency: null,
+        currency_symbol: null,
+        VAT_number: '',
+        TAX_number: null,
+        bank_name: null,
+        bank_account: null,
+        bank_code: null,
+        bank_IBAN: null,
+        bank_SWIFT: null,
+      },
   });
 
   const onSubmit = async (data: NewAccountFormValues) => {
@@ -210,7 +210,7 @@ export function MyAccountSettingsForm({ initialData }: UpdateAccountFormProps) {
                       <FormControl>
                         <Input
                           disabled={isLoading}
-                          placeholder="SaasHQ Inc."
+                          placeholder="ICCCAD Inc."
                           {...field}
                         />
                       </FormControl>

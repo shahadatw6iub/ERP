@@ -1415,7 +1415,7 @@ COPY public."Training" (id, "employeeID", type, date, "time", "createdAt", "upda
 --
 
 COPY public."Users" (id, account_name, avatar, email, is_account_admin, is_admin, created_on, "lastLoginAt", name, password, username, "userStatus", "userLanguage", "watching_boardsIDs", "watching_accountsIDs", role) FROM stdin;
-clr6yh2cz0000lzn8sj0qw4fu			saashqdev@gmail.com	f	t	2024-01-09	2024-01-30	SaasHQ	$2a$12$gfJmtKXHv4.XVYad8X67.ur2wonnaqJawI5lkARIQJu.Sj8Y4SeWy	saashq	ACTIVE	en	\N	\N	guest
+clr6yh2cz0000lzn8sj0qw4fu			ICCCADdev@gmail.com	f	t	2024-01-09	2024-01-30	ICCCAD	$2a$12$gfJmtKXHv4.XVYad8X67.ur2wonnaqJawI5lkARIQJu.Sj8Y4SeWy	ICCCAD	ACTIVE	en	\N	\N	guest
 \.
 
 
@@ -1520,7 +1520,7 @@ COPY public."crm_Accounts_Tasks" (id, content, "createdAt", "createdBy", "update
 --
 
 COPY public."crm_Contacts" (id, account, assigned_to, birthday, created_by, "createdBy", created_on, "createdAt", last_activity, "updatedAt", "updatedBy", last_activity_by, description, email, personal_email, first_name, last_name, office_phone, mobile_phone, website, "position", status, social_twitter, social_facebook, social_linkedin, social_skype, social_instagram, social_youtube, social_tiktok, type, "opportunitiesIDs", "accountsIDs", "documentsIDs") FROM stdin;
-clr89ejrq0000cjcbqkm5alje	\N	clr6yh2cz0000lzn8sj0qw4fu	undefined/undefined/undefined	\N	clr6yh2cz0000lzn8sj0qw4fu	2024-01-10 20:54:53.847	2024-01-10	2024-01-10	2024-01-10	clr6yh2cz0000lzn8sj0qw4fu	\N	IT Guy	dave@gridworkz.com	dave@gridworkz.com	Dave	Cook	2893037651	2893037651	demo.saashq.org	\N	t	\N	\N	\N	\N	\N	\N	\N	Partner	\N	\N	\N
+clr89ejrq0000cjcbqkm5alje	\N	clr6yh2cz0000lzn8sj0qw4fu	undefined/undefined/undefined	\N	clr6yh2cz0000lzn8sj0qw4fu	2024-01-10 20:54:53.847	2024-01-10	2024-01-10	2024-01-10	clr6yh2cz0000lzn8sj0qw4fu	\N	IT Guy	dave@gridworkz.com	dave@gridworkz.com	Dave	Cook	2893037651	2893037651	demo.ICCCAD.org	\N	t	\N	\N	\N	\N	\N	\N	\N	Partner	\N	\N	\N
 \.
 
 

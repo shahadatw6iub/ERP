@@ -1,5 +1,5 @@
-<a href="https://demo.saashq.org/">
-  <h1 align="center">SaasHQ</h1>
+<a href="https://demo.ICCCAD.org/">
+  <h1 align="center">ICCCAD</h1>
 </a>
 
 <p align="center">
@@ -7,16 +7,16 @@
 </p>
 
 <p align="center">
-SaasHQ is a CRM / ERP starter built on top of Next.JS 14 using TypeScript, the great UI library shadCN and Prisma, Postgresql+Tembo as the backend infrastructure. Upload things as an S3 blob for document storage. SaasHQ is based on the awesome NextCRM project by Pavel Dovhomilja. The Workflow engne is inspired by 
+ICCCAD is a CRM / ERP starter built on top of Next.JS 14 using TypeScript, the great UI library shadCN and Prisma, Postgresql+Tembo as the backend infrastructure. Upload things as an S3 blob for document storage. ICCCAD is based on the awesome NextCRM project by Pavel Dovhomilja. The Workflow engne is inspired by 
 the Workflow-Engine project by Nisarg Bhatt.
 </p>
 
 <p align="center">
-  <a href="https://twitter.com/saashqdev">
-    <img alt="X URL" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fsaashqdev">
+  <a href="https://twitter.com/ICCCADdev">
+    <img alt="X URL" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2FICCCADdev">
   </a>
-  <a href="https://github.com/saashqdev/saashq/blob/main/LICENSE">
-    <img alt="GitHub License" src="https://img.shields.io/github/license/saashqdev/saashq">
+  <a href="https://github.com/ICCCADdev/ICCCAD/blob/main/LICENSE">
+    <img alt="GitHub License" src="https://img.shields.io/github/license/ICCCADdev/ICCCAD">
   </a>
 </p>
 
@@ -73,7 +73,7 @@ the Workflow-Engine project by Nisarg Bhatt.
 
 1. More AI powered - daily summary of tasks and project (OpenAI integration) - in progress
 2. Email campaigns management - integration with MailChimp and Listmonk - in planning
-3. ~~Docker version - in planning (There will be complete bundle to run SaasHQ on-premise)~~
+3. ~~Docker version - in planning (There will be complete bundle to run ICCCAD on-premise)~~
 4. Testing - Jest + Cypress (if anyone want to help I will be very happy) - in planning
 5. Fix all Types issue (no more "any") - complete (thanks to Nisarg Bhatt)
 6. i18n - localization - in progress (if anyone want to help I will be very happy)
@@ -88,13 +88,13 @@ We use [resend.com](https://resend.com) + [react.email](https://react.email) as 
 
 ## Reports
 
-We use Tremor charts as a tool for creating charts in SaasHQ
+We use Tremor charts as a tool for creating charts in ICCCAD
 
 ![hero](/public/reports.png)
 
 ## Documentation
 
-Available soon at: https://docs.saashq.org
+Available soon at: https://docs.ICCCAD.org
 
 ## Installation
 
@@ -103,8 +103,8 @@ Available soon at: https://docs.saashq.org
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/saashqdev/saashq.git
-   cd saashq
+   git clone https://github.com/ICCCADdev/ICCCAD.git
+   cd ICCCAD
    ```
 
 1. Install the preset:
@@ -160,7 +160,7 @@ Available soon at: https://docs.saashq.org
 
 ## Docker installation
 
-[Link to Docker HUB](https://hub.docker.com/repository/saashqdev/saashq/general)
+[Link to Docker HUB](https://hub.docker.com/repository/ICCCADdev/ICCCAD/general)
 
 <details><summary><b>Show instructions</b></summary>
 
@@ -181,8 +181,8 @@ Available soon at: https://docs.saashq.org
 4. Init Prisma
 
    ```sh
-    docker-compose exec saashq npx prisma generate
-    docker-compose exec saashq npx prisma db push
+    docker-compose exec ICCCAD npx prisma generate
+    docker-compose exec ICCCAD npx prisma db push
    ```
 
 5. Import initial data from initial-data folder
@@ -196,15 +196,15 @@ Available soon at: https://docs.saashq.org
 
 ## Issues
 
-- [Open an issue](https://github.com/saashqdev/saashq/issues) if you find a bug or have a suggestion for improvements.
+- [Open an issue](https://github.com/ICCCADdev/ICCCAD/issues) if you find a bug or have a suggestion for improvements.
 
 ## Contact
 
-[saashq.org](https://saashq.org)
+[ICCCAD.org](https://ICCCAD.org)
 
 ## Contributions
 
-<a href="https://www.buymeacoffee.com/saashqdev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a> 
+<a href="https://www.buymeacoffee.com/ICCCADdev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a> 
 
 ## Repo Activity
 
@@ -212,4 +212,5 @@ Available soon at: https://docs.saashq.org
 
 ## License
 
-Licensed under the [MIT license](https://github.com/saashqdev/saashq/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/ICCCADdev/ICCCAD/blob/main/LICENSE.md).
+# ERP-HQ

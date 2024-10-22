@@ -28,14 +28,14 @@ export async function POST(req: Request) {
     return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
   }
 
-  if (!process.env.SAASHQ_TOKEN) {
+  if (!process.env.ICCCAD_TOKEN) {
     return NextResponse.json(
-      { message: 'SAASHQ_TOKEN not defined in .env.local file' },
+      { message: 'ICCCAD_TOKEN not defined in .env.local file' },
       { status: 401 }
     );
   }
 
-  if (token.trim() !== process.env.SAASHQ_TOKEN.trim()) {
+  if (token.trim() !== process.env.ICCCAD_TOKEN.trim()) {
     console.log('Unauthorized');
     return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
   } else {

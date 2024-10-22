@@ -27,7 +27,7 @@ export async function PUT(
     return new NextResponse('Passwords do not match', { status: 400 });
   }
 
-  if (session.user.email === 'demo@saashq.org') {
+  if (session.user.email === 'demo@ICCCAD.org') {
     return new NextResponse(
       "Hey, don't be a fool! There are so many works done! Thanks!",
       {

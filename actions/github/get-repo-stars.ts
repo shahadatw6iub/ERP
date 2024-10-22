@@ -4,7 +4,7 @@ export default async function getGithubRepoStars(): Promise<number> {
   try {
     const response: AxiosResponse<any> = await axios.get(
       process.env.NEXT_PUBLIC_GITHUB_REPO_API ||
-        'https://api.github.com/repos/saashqdev/saashq'
+        'https://api.github.com/repos/ICCCADdev/ICCCAD'
     );
     const stars = response.data;
 
